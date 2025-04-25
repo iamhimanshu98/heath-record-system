@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:importantForAccessibility="yes">
+
+    <!-- Appointment Status Text -->
+    <TextView
+        android:id="@+id/tvAppointmentStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Appointment Status"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Appointment status information"/>
+
+    <!-- ScrollView with accessibility improvements -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:importantForAccessibility="no"
+        android:contentDescription="List of appointments">
+
+        <!-- Appointment Details Layout -->
+        <LinearLayout
+            android:id="@+id/layoutAppointmentDetails"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:importantForAccessibility="yes"/>
+    </ScrollView>
+
+    <!-- Check Appointment Button -->
+    <Button
+        android:id="@+id/btnCheckAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Appointments"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:padding="12dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Button to check your appointments"/>
+</LinearLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:orientation="vertical"-->
+    <!--    android:padding="20dp"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:gravity="center">-->
+
+    <!--    &lt;!&ndash; Appointment Status Text &ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvAppointmentStatus"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Appointment Status"-->
+    <!--        android:textSize="18sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:layout_marginBottom="20dp" />-->
+
+    <!--    &lt;!&ndash; Appointment Details Layout &ndash;&gt;-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layoutAppointmentDetails"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:padding="10dp"-->
+    <!--        android:visibility="gone"/>-->
+
+    <!--    &lt;!&ndash; Check Appointment Button &ndash;&gt;-->
+    <!--    <Button-->
+    <!--        android:id="@+id/btnCheckAppointment"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Check Appointment"-->
+    <!--        android:layout_marginTop="30dp" />-->
+    <!--</LinearLayout>-->

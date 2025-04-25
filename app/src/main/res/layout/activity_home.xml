@@ -1,0 +1,133 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F3C60">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/baseline_person_24"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/circle_background"
+            android:padding="8dp" />
+
+        <!-- Welcome with Icon -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+<!--            <ImageView-->
+<!--                android:layout_width="32dp"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:background="#191818"-->
+<!--                android:src="@drawable/ic_launcher_foreground"-->
+<!--                android:layout_marginEnd="8dp" />-->
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to Health Tracker!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <!-- Personal Details Title -->
+        <TextView
+            android:id="@+id/tvHealthStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Details"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Appointments Info -->
+        <TextView
+            android:id="@+id/tvAppointments"
+            android:layout_width="330dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="16dp"
+            android:background="#DDF7FF"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+        <!-- Card-like Container for Buttons -->
+        <LinearLayout
+            android:layout_width="366dp"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btngetmoreinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_button"
+                android:text="View Details"
+                android:textColor="#FFFFFF"
+               />
+
+            <Button
+                android:id="@+id/btnCheckAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_button"
+                android:text="Check Appointment"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnmeasurementdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_button"
+                android:text="Measurement details"
+                android:textColor="#FFFFFF" />
+
+
+            <Button
+                android:id="@+id/btnMedicineList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_button"
+                android:text="View Medicine List"
+                android:textColor="#FFFFFF" />
+
+
+
+            <Button
+                android:id="@+id/btnSignOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button_redd"
+                android:stateListAnimator="@null"
+                android:text="Sign Out"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
