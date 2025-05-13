@@ -25,7 +25,7 @@ Health Recorder is a user-friendly Android application designed to help users ma
 ---
 
 ### 📅 Appointments & 📐 Measurements
-<div style="display: flex; gap: 30px;">
+<div style="display: flex; gap: 30rem;">
     <img src="images/appointments_page.png" alt="Appointments" width="200" />
     <img src="images/measurements_page.png" alt="Measurements" width="200" />
 </div>
