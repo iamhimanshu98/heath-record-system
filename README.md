@@ -20,37 +20,22 @@ Health Recorder is a user-friendly Android application designed to help users ma
 
 ### 🏠 Home & Main Page
 <div style="display: flex; gap: 16px;">
-  <div style="text-align: center;">
     <img src="images/home_page.png" alt="Home Page" width="200" />
-    <p>Home Page</p>
-  </div>
-  <div style="text-align: center;">
     <img src="images/main_page.png" alt="Main Page" width="200" />
-    <p>Main Page</p>
-  </div>
 </div>
 
 ---
 
 ### 📅 Appointments & 📐 Measurements
 <div style="display: flex; gap: 16px;">
-  <div style="text-align: center;">
     <img src="images/appointments_page.png" alt="Appointments" width="200" />
-    <p>Appointments</p>
-  </div>
-  <div style="text-align: center;">
     <img src="images/measurements_page.png" alt="Measurements" width="200" />
-    <p>Measurements</p>
-  </div>
 </div>
 
 ---
 
 ### ℹ️ Get Info Page
-<div style="text-align: center;">
-  <img src="images/get_info_page.png" alt="Get Info Page" width="200"/>
-  <p>Get Info Page</p>
-</div>
+<img src="images/get_info_page.png" alt="Get Info Page" width="200"/>
 
 ---
 
