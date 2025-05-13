@@ -39,3 +39,9 @@ Health Recorder is a user-friendly Android application designed to help users ma
 - Android Studio
 - Material Components
 - Accessibility-friendly components
+
+---
+
+## 👨‍💻 Developer
+
+This app was developed by **Prayanjali Sharma** with 🤍.
