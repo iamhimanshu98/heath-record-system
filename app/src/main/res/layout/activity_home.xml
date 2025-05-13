@@ -1,15 +1,15 @@
-
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F3C60">
+    android:background="@color/background">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
 
         <!-- Profile Image -->
         <ImageView
@@ -17,67 +17,56 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/baseline_person_24"
-            android:scaleType="centerCrop"
             android:layout_marginBottom="12dp"
             android:background="@drawable/circle_background"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_person_24" />
 
-        <!-- Welcome with Icon -->
-        <LinearLayout
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="12dp"
+            android:text="Welcome to Health Tracker!"
+            android:textColor="@color/textPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-<!--            <ImageView-->
-<!--                android:layout_width="32dp"-->
-<!--                android:layout_height="32dp"-->
-<!--                android:background="#191818"-->
-<!--                android:src="@drawable/ic_launcher_foreground"-->
-<!--                android:layout_marginEnd="8dp" />-->
+        <!-- Appointment Info -->
+        <TextView
+            android:id="@+id/tvAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="5dp"
+            android:text="Appointments Info"
+            android:textColor="@color/textSecondary"
+            android:textSize="19sp" />
 
-            <TextView
-                android:id="@+id/tvWelcome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Welcome to Health Tracker!"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#fff" />
-        </LinearLayout>
-
-        <!-- Personal Details Title -->
+        <!-- Section Title -->
         <TextView
             android:id="@+id/tvHealthStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
             android:text="Personal Details"
-            android:textSize="18sp"
-            android:textColor="#fff"
-            android:layout_marginBottom="8dp" />
+            android:textColor="@color/textPrimary"
+            android:textSize="18sp" />
 
-        <!-- Appointments Info -->
-        <TextView
-            android:id="@+id/tvAppointments"
-            android:layout_width="330dp"
-            android:layout_height="39dp"
-            android:layout_marginBottom="16dp"
-            android:background="#DDF7FF"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-
-        <!-- Card-like Container for Buttons -->
+        <!-- Card with Buttons (without sign out) -->
         <LinearLayout
-            android:layout_width="366dp"
-
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/card_background"
+            android:layout_marginBottom="20dp"
+            android:background="@color/cardBackground"
+            android:clipToOutline="true"
             android:elevation="4dp"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:paddingHorizontal="54dp"
+            android:paddingVertical="20dp">
 
             <Button
                 android:id="@+id/btngetmoreinfo"
@@ -86,8 +75,7 @@
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/rounded_button"
                 android:text="View Details"
-                android:textColor="#FFFFFF"
-               />
+                android:textColor="@color/buttonText" />
 
             <Button
                 android:id="@+id/btnCheckAppointment"
@@ -96,7 +84,7 @@
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/rounded_button"
                 android:text="Check Appointment"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/buttonText" />
 
             <Button
                 android:id="@+id/btnmeasurementdetails"
@@ -104,9 +92,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/rounded_button"
-                android:text="Measurement details"
-                android:textColor="#FFFFFF" />
-
+                android:text="Measurement Details"
+                android:textColor="@color/buttonText" />
 
             <Button
                 android:id="@+id/btnMedicineList"
@@ -115,9 +102,18 @@
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/rounded_button"
                 android:text="View Medicine List"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/buttonText" />
+        </LinearLayout>
 
-
+        <!-- Sign Out Button (separate, with distinct style) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToOutline="true"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="54dp"
+            android:paddingVertical="2dp">
 
             <Button
                 android:id="@+id/btnSignOut"
@@ -126,8 +122,8 @@
                 android:background="@drawable/rounded_button_redd"
                 android:stateListAnimator="@null"
                 android:text="Sign Out"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

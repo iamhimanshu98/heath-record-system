@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="red">#FF0000</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="purple_500">#6200EE</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Primary Sky Blue Theme -->
+    <color name="colorPrimary">#4FC3F7</color> <!-- Light Sky Blue -->
+    <color name="colorPrimaryDark">#0288D1</color> <!-- Deeper Sky Blue -->
+    <color name="colorAccent">#29B6F6</color>
+
+    <!-- Secondary color -->
+    <color name="colorSecondary">#03DAC5</color> <!-- Teal-ish accent -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- Backgrounds -->
+    <color name="background">#E1F5FE</color> <!-- Light blue background -->
+    <color name="backgroundLight">#F0FBFF</color> <!-- Extra light blue -->
+    <color name="cardBackground">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="textPrimary">#0D47A1</color> <!-- Strong blue -->
+    <color name="textSecondary">#546E7A</color> <!-- Muted grey-blue -->
+    <color name="buttonText">#FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="successGreen">#66BB6A</color>
+    <color name="errorRed">#EF5350</color>
+
+    <!-- Overlay -->
+    <color name="overlayWhiteTranslucent">#66FFFFFF</color>
+
+    <!-- Button Backgrounds (optional custom ones) -->
+    <color name="buttonBackgroundSecondary">#03DAC5</color>
+    <color name="buttonBackgroundError">#F44336</color>
 </resources>

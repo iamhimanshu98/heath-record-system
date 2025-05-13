@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
     <LinearLayout
@@ -10,6 +11,25 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
 
+        <!-- Back Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginBottom="8dp">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/colorPrimaryDark"
+                android:contentDescription="Back" />
+        </LinearLayout>
+
+        <!-- Profile Image -->
         <ImageView
             android:id="@+id/profile_image"
             android:layout_width="150dp"
@@ -18,11 +38,13 @@
             android:scaleType="centerCrop"
             android:layout_marginBottom="12dp" />
 
+        <!-- Upload Button -->
         <Button
             android:id="@+id/upload_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upload Picture" />
+            android:text="Upload Picture"
+            android:layout_marginBottom="16dp" />
 
         <!-- Name Field -->
         <TextView
@@ -37,14 +59,14 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:padding="12dp"
-            android:hint="Enter your name" />
+            android:hint="Enter your name"
+            android:layout_marginBottom="16dp" />
 
         <!-- Gender Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gender"
-            android:layout_marginTop="16dp" />
+            android:text="Gender" />
 
         <EditText
             android:id="@+id/gender_input"
@@ -52,14 +74,14 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:padding="12dp"
-            android:hint="Enter gender" />
+            android:hint="Enter gender"
+            android:layout_marginBottom="16dp" />
 
         <!-- Blood Type Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Blood Type"
-            android:layout_marginTop="16dp" />
+            android:text="Blood Type" />
 
         <EditText
             android:id="@+id/blood_type_input"
@@ -67,14 +89,14 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:padding="12dp"
-            android:hint="Enter blood type" />
+            android:hint="Enter blood type"
+            android:layout_marginBottom="16dp" />
 
         <!-- Address Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Address"
-            android:layout_marginTop="16dp" />
+            android:text="Address" />
 
         <EditText
             android:id="@+id/address_input"
@@ -82,14 +104,14 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:padding="12dp"
-            android:hint="Enter address" />
+            android:hint="Enter address"
+            android:layout_marginBottom="16dp" />
 
         <!-- Phone Number Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phone Number"
-            android:layout_marginTop="16dp" />
+            android:text="Phone Number" />
 
         <EditText
             android:id="@+id/phone_input"
@@ -98,14 +120,14 @@
             android:hint="Enter phone number"
             android:minHeight="48dp"
             android:padding="12dp"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:layout_marginBottom="16dp" />
 
         <!-- Email Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:layout_marginTop="16dp" />
+            android:text="Email" />
 
         <EditText
             android:id="@+id/email_input"
@@ -114,14 +136,14 @@
             android:minHeight="48dp"
             android:padding="12dp"
             android:hint="Enter email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp" />
 
         <!-- Birth Date Field -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Birth Date"
-            android:layout_marginTop="16dp" />
+            android:text="Birth Date" />
 
         <EditText
             android:id="@+id/birth_date_input"
@@ -130,7 +152,8 @@
             android:hint="Enter birth date"
             android:minHeight="48dp"
             android:padding="12dp"
-            android:focusable="false" />
+            android:focusable="false"
+            android:layout_marginBottom="16dp" />
 
         <!-- Edit Button -->
         <Button
@@ -138,15 +161,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Edit Fields"
-            android:layout_marginTop="20dp" />
+            android:layout_marginBottom="16dp" />
 
         <!-- Save Button -->
         <Button
             android:id="@+id/save_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save"
-            android:layout_marginTop="20dp" />
+            android:text="Save" />
 
     </LinearLayout>
 </ScrollView>

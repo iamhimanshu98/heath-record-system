@@ -10,45 +10,44 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Healthrecorder"
+        android:theme="@style/Theme.HealthApp"
         tools:targetApi="31">
+
         <activity
             android:name=".MeasurementActivity"
             android:exported="false"
-            android:theme="@style/Theme.Healthrecorder" />
+            android:theme="@style/Theme.HealthApp" />
+
         <activity
             android:name=".DoctorAppointmentActivity"
             android:exported="false"
-            android:theme="@style/Theme.Healthrecorder" />
+            android:theme="@style/Theme.HealthApp" />
 
         <activity
             android:name=".GetMoreInfoActivity"
             android:exported="false"
-            android:theme="@style/Theme.Healthrecorder" />
+            android:theme="@style/Theme.HealthApp" />
 
         <activity
             android:name=".MedicineList"
             android:exported="false"
-            android:theme="@style/Theme.Healthrecorder" />
-
+            android:theme="@style/Theme.HealthApp" />
 
         <activity
             android:name=".HomeActivity"
             android:exported="false"
-            android:theme="@style/Theme.Healthrecorder" />
+            android:theme="@style/Theme.HealthApp" />
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Healthrecorder">
+            android:theme="@style/Theme.HealthApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
-
-

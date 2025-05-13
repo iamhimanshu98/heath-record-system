@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -59,6 +60,9 @@ public class GetMoreInfoActivity extends AppCompatActivity {
             setInputsEnabled(isEditMode);
             editButton.setText(isEditMode ? "Lock Fields" : "Edit Fields");
         });
+
+        ImageButton backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> onBackPressed());
     }
 
     private void setDefaultPatientData() {
@@ -68,7 +72,7 @@ public class GetMoreInfoActivity extends AppCompatActivity {
         addressInput.setText("Alwar, Rajasthan");
         phoneInput.setText("1234567890");
         emailInput.setText("prayanjali@example.com");
-        birthDateInput.setText("01/01/2000");
+        birthDateInput.setText("01/01/2004");
     }
 
     private void setInputsEnabled(boolean enabled) {
@@ -87,21 +91,6 @@ public class GetMoreInfoActivity extends AppCompatActivity {
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Profile Image"), PICK_IMAGE_REQUEST);
     }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
-//            Uri imageUri = data.getData();
-//            try {
-//                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
-//                profileImage.setImageBitmap(bitmap);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -123,7 +112,6 @@ public class GetMoreInfoActivity extends AppCompatActivity {
             }
         }
     }
-
 
     private void showDatePicker() {
         final Calendar c = Calendar.getInstance();

@@ -2,7 +2,8 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <!-- Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
@@ -14,7 +15,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:background="@color/colorPrimary" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -32,7 +34,8 @@
             android:layout_alignParentStart="true"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_arrow_back"
-            android:contentDescription="Back" />
+            android:contentDescription="Back"
+            app:tint="@color/colorPrimaryDark" />
 
         <ImageButton
             android:id="@+id/addButton"
@@ -41,118 +44,123 @@
             android:layout_alignParentEnd="true"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_add"
-            android:contentDescription="Add" />
+            android:contentDescription="Add"
+            app:tint="@color/colorPrimaryDark" />
     </RelativeLayout>
 
-    <!-- Scrollable Cards -->
-    <ScrollView
+    <!-- LinearLayout for Cards -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:padding="16dp">
+        android:orientation="vertical"
+        android:layout_marginTop="160dp"
+        android:padding="16dp"
+        android:scrollbars="none">
 
-        <LinearLayout
+        <!-- Blood Pressure Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bloodPressureCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@color/cardBackground">
 
-            <!-- Blood Pressure Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/bloodPressureCard"
+            <TextView
+                android:id="@+id/bloodPressureText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+                android:padding="20dp"
+                android:text="Blood Pressure: 120/80"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary" />
+        </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/bloodPressureText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Blood Pressure: 120/80"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
+        <!-- Pulse Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pulseCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@color/cardBackground">
 
-            <!-- Pulse Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/pulseCard"
+            <TextView
+                android:id="@+id/pulseText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+                android:padding="20dp"
+                android:text="Pulse: 72 bpm"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary" />
+        </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/pulseText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Pulse: 72 bpm"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
+        <!-- Sugar Level Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sugarLevelCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@color/cardBackground">
 
-            <!-- Sugar Level Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/sugarLevelCard"
+            <TextView
+                android:id="@+id/sugarLevelText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+                android:padding="20dp"
+                android:text="Sugar Level: 90 mg/dL"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary" />
+        </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/sugarLevelText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Sugar Level: 90 mg/dL"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
+        <!-- Height Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/heightCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@color/cardBackground">
 
-            <!-- Height Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/heightCard"
+            <TextView
+                android:id="@+id/heightText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
+                android:padding="20dp"
+                android:text="Height: 170 cm"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary" />
+        </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/heightText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Height: 170 cm"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
+        <!-- Weight Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weightCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:background="@color/cardBackground">
 
-            <!-- Weight Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/weightCard"
+            <TextView
+                android:id="@+id/weightText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp">
-
-                <TextView
-                    android:id="@+id/weightText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Weight: 65 kg"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-    </ScrollView>
+                android:padding="20dp"
+                android:text="Weight: 65 kg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
